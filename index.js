@@ -26,7 +26,7 @@ client.on('message', message => {
     }
     else if (messageSplit[1].valueOf() == "".valueOf()){
       var rollOutcome = Math.floor(Math.random() * messageSplit[1]) + 1;
-      message.channel.send(":game_die: " + message.author + " rolled a d" + messageSplit[1] + " and got a" + rollOutcome);
+      message.channel.send(":game_die: " + message.author + " rolled a d" + messageSplit[2] + " and got a " + rollOutcome);
       message.delete();
 
     }
