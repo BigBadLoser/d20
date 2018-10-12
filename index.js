@@ -25,7 +25,8 @@ client.on('message', message => {
           //message.channel.send(messageSplit[1] + " is not a number!");
     }
     else if (messageSplit[1].valueOf() == "".valueOf()){
-      var rollOutcome = Math.floor(Math.random() * messageSplit[1]) + 1;
+      var rollOutcome;
+      rollOutcome = Math.floor(Math.random() * messageSplit[2]) + 1;
       message.channel.send(":game_die: " + message.author + " rolled a d" + messageSplit[2] + " and got a " + rollOutcome);
       message.delete();
 
@@ -48,4 +49,4 @@ client.on('message', message => {
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login('token');
+client.login('');
